@@ -19,7 +19,6 @@ Spotify Browser is a full-stack web application that allows users to search for 
 - **Node.js** — The JavaScript runtime environment used to run the Express web server.
 - **Express.js** — The backend web framework that defines API routes, handles OAuth authentication with Spotify, and proxies API requests from the Angular frontend to the Spotify Web API.
 - **node-fetch** — A package that brings the browser's `fetch()` API to Node.js, used by the Express server to make HTTP requests to Spotify's API.
-- **express-session** *(Extra Credit)* — Session middleware added to support multiple simultaneous users. Each user's Spotify access and refresh tokens are stored in their own server-side session rather than in global variables.
 
 ### External API
 - **Spotify Web API** — The core data source for the application. The backend communicates with Spotify's REST API to retrieve user profile information, search results, artist details, top tracks, albums, and individual track data.

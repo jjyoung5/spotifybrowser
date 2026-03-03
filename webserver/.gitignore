@@ -1,0 +1,7 @@
+tokens.json
+client_secret.json
+selfsigned.crt
+selfsigned.key
+
+client/node_modules/
+webserver/node_modules/

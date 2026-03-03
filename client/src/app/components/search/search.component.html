@@ -1,0 +1,15 @@
+<h1>Search Spotify</h1>
+<input [(ngModel)]="searchString">
+<select [(ngModel)]="searchCategory">
+  @for(category of searchCategories; track category) {
+    <option [value]="category">{{ category }}</option>
+  }
+</select>
+<button class="btn btn-light" (click)="search()">Search</button>
+
+@if(searchCategory === 'artist' || searchCategory === 'album') {
+  <app-carousel [resources]="resources" carouselId="search-carousel"></app-carousel>
+}
+@if(searchCategory === 'track') {
+  <app-track-list [tracks]="$any(resources)"></app-track-list>
+}

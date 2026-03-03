@@ -1,0 +1,34 @@
+@if(tracks) {
+  <table class="table table-sm table-light table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Track</th>
+        <th scope="col">Duration</th>
+        @if(!hideArtist) {
+          <th scope="col">Primary Artist</th>
+        }
+        @if(!hideAlbum) {
+          <th scope="col">Album</th>
+        }
+      </tr>
+    </thead>
+    <tbody>
+      @for(track of tracks; track track.id; let i=$index) {
+        <tr>
+          <td>{{ i + 1 }}</td>
+          <td>
+            <a [routerLink]="['/track', track.id]">{{ track.name }}</a>
+          </td>
+          <td>{{ track.durationStr }}</td>
+          @if(!hideArtist) {
+            <td><a [routerLink]="['/artist', track.artists[0].id]">{{ track.artists[0].name }}</a></td>
+          }
+          @if(!hideAlbum) {
+            <td><a [routerLink]="['/album', track.album.id]">{{ track.album.name }}</a></td>
+          }
+        </tr>
+      }
+    </tbody>
+  </table>
+}

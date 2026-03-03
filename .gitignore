@@ -43,4 +43,4 @@ testem.log
 Thumbs.db
 
 webserver/tokens.json
-webserver/client_secret.json
+webserver/client_secret.jsonnode_modules/
